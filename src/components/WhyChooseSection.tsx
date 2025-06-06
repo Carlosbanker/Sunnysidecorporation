@@ -36,29 +36,26 @@ const WhyChooseSection: React.FC = () => {
   ];
 
   return (
-    <section className="py-24 bg-gradient-to-r from-blue-600 to-purple-700">
+    <section className="py-32 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Why Choose SunnySide</h2>
-          <p className="text-xl text-blue-100 max-w-3xl mx-auto">
+        <div className="text-center mb-24">
+          <h2 className="text-5xl md:text-6xl font-light text-gray-900 mb-8">Why Choose Us</h2>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto font-light">
             Experience the difference with our comprehensive approach to digital transformation
           </p>
-          <div className="w-24 h-1 bg-white mx-auto mt-8 rounded-full"></div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature, index) => (
             <div 
               key={index} 
-              className="bg-white/10 backdrop-blur-sm p-8 rounded-2xl border border-white/20 hover:bg-white/20 transition-all duration-300 transform hover:-translate-y-2"
+              className="bg-white p-10 rounded-3xl shadow-sm border border-gray-100 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 text-center"
             >
-              <div className="flex items-center mb-4">
-                <div className="p-3 bg-white/20 rounded-xl text-white mr-4">
-                  {feature.icon}
-                </div>
-                <h3 className="text-xl font-bold text-white">{feature.title}</h3>
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-50 rounded-2xl mb-8 text-blue-600">
+                {feature.icon}
               </div>
-              <p className="text-blue-100 leading-relaxed">{feature.description}</p>
+              <h3 className="text-xl font-medium text-gray-900 mb-4">{feature.title}</h3>
+              <p className="text-gray-600 leading-relaxed font-light">{feature.description}</p>
             </div>
           ))}
         </div>
