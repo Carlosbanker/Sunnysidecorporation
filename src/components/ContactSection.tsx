@@ -1,38 +1,66 @@
 import React from 'react';
-import { Mail, Globe, MapPin } from 'lucide-react';
+import { Mail, Globe, MapPin, Phone, MessageCircle } from 'lucide-react';
 
 const ContactSection: React.FC = () => {
   return (
-    <section id="contact" className="py-20 bg-black">
+    <section id="contact" className="py-24 bg-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Contact Us</h2>
-          <p className="text-gray-400 max-w-2xl mx-auto">
-            Ready to transform your operations with intelligent, centralized systems? Get in touch with our team.
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Get In Touch</h2>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Ready to transform your operations with intelligent, centralized systems? Let's start the conversation.
           </p>
-          <div className="w-20 h-1 bg-blue-400 mx-auto mt-6 rounded-full"></div>
+          <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto mt-8 rounded-full"></div>
         </div>
 
-        <div className="flex flex-col md:flex-row items-center justify-center gap-10 max-w-3xl mx-auto">
-          <a href="mailto:info@sunnysidecorporation.co.za" className="flex flex-col items-center text-center p-6 bg-gray-900/50 backdrop-blur-sm rounded-xl border border-gray-800 w-full md:w-auto transition-all duration-300 hover:shadow-blue-500/20 hover:border-blue-500/30 group">
-            <div className="p-4 rounded-full bg-gray-800/50 group-hover:bg-blue-500/20 transition-colors duration-300 mb-4">
-              <Mail className="h-6 w-6 text-blue-400" />
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          <a 
+            href="mailto:info@sunnysidecorporation.co.za" 
+            className="group bg-gradient-to-br from-blue-600 to-blue-700 p-8 rounded-2xl text-center hover:from-blue-700 hover:to-blue-800 transition-all duration-300 transform hover:-translate-y-2 shadow-lg hover:shadow-xl"
+          >
+            <div className="inline-flex items-center justify-center w-16 h-16 bg-white/20 rounded-2xl mb-6 group-hover:scale-110 transition-transform duration-300">
+              <Mail className="h-8 w-8 text-white" />
             </div>
-            <p className="text-gray-300 font-medium">info@sunnysidecorporation.co.za</p>
+            <h3 className="text-xl font-bold text-white mb-2">Email Us</h3>
+            <p className="text-blue-100 font-medium">info@sunnysidecorporation.co.za</p>
           </a>
 
-          <a href="https://www.sunnysidecorporation.co.za" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center text-center p-6 bg-gray-900/50 backdrop-blur-sm rounded-xl border border-gray-800 w-full md:w-auto transition-all duration-300 hover:shadow-blue-500/20 hover:border-blue-500/30 group">
-            <div className="p-4 rounded-full bg-gray-800/50 group-hover:bg-blue-500/20 transition-colors duration-300 mb-4">
-              <Globe className="h-6 w-6 text-blue-400" />
+          <a 
+            href="https://www.sunnysidecorporation.co.za" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="group bg-gradient-to-br from-purple-600 to-purple-700 p-8 rounded-2xl text-center hover:from-purple-700 hover:to-purple-800 transition-all duration-300 transform hover:-translate-y-2 shadow-lg hover:shadow-xl"
+          >
+            <div className="inline-flex items-center justify-center w-16 h-16 bg-white/20 rounded-2xl mb-6 group-hover:scale-110 transition-transform duration-300">
+              <Globe className="h-8 w-8 text-white" />
             </div>
-            <p className="text-gray-300 font-medium">www.sunnysidecorporation.co.za</p>
+            <h3 className="text-xl font-bold text-white mb-2">Visit Website</h3>
+            <p className="text-purple-100 font-medium">www.sunnysidecorporation.co.za</p>
           </a>
 
-          <div className="flex flex-col items-center text-center p-6 bg-gray-900/50 backdrop-blur-sm rounded-xl border border-gray-800 w-full md:w-auto transition-all duration-300 hover:shadow-blue-500/20 hover:border-blue-500/30 group">
-            <div className="p-4 rounded-full bg-gray-800/50 group-hover:bg-blue-500/20 transition-colors duration-300 mb-4">
-              <MapPin className="h-6 w-6 text-blue-400" />
+          <div className="group bg-gradient-to-br from-cyan-600 to-cyan-700 p-8 rounded-2xl text-center hover:from-cyan-700 hover:to-cyan-800 transition-all duration-300 transform hover:-translate-y-2 shadow-lg hover:shadow-xl">
+            <div className="inline-flex items-center justify-center w-16 h-16 bg-white/20 rounded-2xl mb-6 group-hover:scale-110 transition-transform duration-300">
+              <MapPin className="h-8 w-8 text-white" />
             </div>
-            <p className="text-gray-300 font-medium">Headquarters: South Africa</p>
+            <h3 className="text-xl font-bold text-white mb-2">Headquarters</h3>
+            <p className="text-cyan-100 font-medium">South Africa</p>
+          </div>
+        </div>
+
+        <div className="mt-16 text-center">
+          <div className="bg-white/5 backdrop-blur-sm p-8 rounded-2xl border border-white/10 max-w-3xl mx-auto">
+            <MessageCircle className="w-12 h-12 text-blue-400 mx-auto mb-4" />
+            <h3 className="text-2xl font-bold text-white mb-4">Ready to Get Started?</h3>
+            <p className="text-gray-300 mb-6">
+              Let's discuss how SunnySide Corporation can transform your business operations with our intelligent software solutions.
+            </p>
+            <a 
+              href="mailto:info@sunnysidecorporation.co.za?subject=Business Inquiry"
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-xl hover:from-blue-600 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+            >
+              Start Conversation
+              <Mail className="ml-2 h-5 w-5" />
+            </a>
           </div>
         </div>
       </div>
