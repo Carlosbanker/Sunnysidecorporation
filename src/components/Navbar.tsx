@@ -25,14 +25,14 @@ const Navbar: React.FC = () => {
     <nav
       className={`fixed w-full z-50 transition-all duration-300 ${
         scrolled
-          ? 'bg-white/80 backdrop-blur-xl py-4 shadow-sm border-b border-gray-100'
+          ? 'bg-white/90 backdrop-blur-xl py-4 shadow-sm border-b border-gray-100'
           : 'bg-transparent py-6'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
           <div className="flex items-center">
-            <span className={`font-light text-2xl ${scrolled ? 'text-gray-900' : 'text-gray-900'}`}>
+            <span className={`font-thin text-2xl ${scrolled ? 'text-black' : 'text-black'}`}>
               SunnySide Corporation
             </span>
           </div>
@@ -45,8 +45,8 @@ const Navbar: React.FC = () => {
                 href={`#${item.toLowerCase()}`}
                 className={`font-light transition-colors duration-200 ${
                   scrolled 
-                    ? 'text-gray-700 hover:text-blue-600' 
-                    : 'text-gray-700 hover:text-blue-600'
+                    ? 'text-gray-800 hover:text-blue-600' 
+                    : 'text-gray-800 hover:text-blue-600'
                 }`}
               >
                 {item}
@@ -58,7 +58,7 @@ const Navbar: React.FC = () => {
             <button
               onClick={() => setIsOpen(!isOpen)}
               className={`p-2 rounded-xl transition-colors duration-200 ${
-                scrolled ? 'text-gray-700 hover:bg-gray-100' : 'text-gray-700 hover:bg-gray-100'
+                scrolled ? 'text-gray-800 hover:bg-gray-100' : 'text-gray-800 hover:bg-gray-100'
               }`}
             >
               {isOpen ? (
@@ -79,7 +79,7 @@ const Navbar: React.FC = () => {
               <a
                 key={item}
                 href={`#${item.toLowerCase()}`}
-                className="block text-gray-700 hover:text-blue-600 font-light transition-colors duration-200 text-lg"
+                className="block text-gray-800 hover:text-blue-600 font-light transition-colors duration-200 text-lg"
                 onClick={() => setIsOpen(false)}
               >
                 {item}

@@ -27,7 +27,7 @@ const ProductsSection: React.FC = () => {
       name: 'MediData',
       description: 'Centralized medical record system for clinics, hospitals, and health departments. Highly secure, scalable, and compliant.',
       details: 'A comprehensive health information system that connects patients, providers, and administrators through a secure platform, improving care coordination while maintaining strict privacy standards.',
-      color: 'bg-red-50 text-red-600',
+      color: 'bg-blue-50 text-blue-600',
       features: ['HIPAA Compliant', 'Real-time Access', 'Multi-facility Support', 'Advanced Security']
     },
     {
@@ -35,7 +35,7 @@ const ProductsSection: React.FC = () => {
       name: 'Retail Solutions',
       description: 'POS and CRM for businesses with inventory control, staff management, loyalty, and support for multi-branch operations.',
       details: 'End-to-end retail management platform that handles everything from point-of-sale to customer relationships, inventory forecasting, and advanced analytics for business growth.',
-      color: 'bg-green-50 text-green-600',
+      color: 'bg-blue-50 text-blue-600',
       features: ['Multi-branch Support', 'Inventory Management', 'Customer Loyalty', 'Sales Analytics']
     },
     {
@@ -43,17 +43,17 @@ const ProductsSection: React.FC = () => {
       name: 'DevSuite',
       description: 'Developer tools and custom software systems built for enterprise-scale integration, automation, and performance.',
       details: 'Professional development environment with APIs, libraries, and frameworks specifically designed for African businesses looking to create custom applications or integrate existing systems.',
-      color: 'bg-orange-50 text-orange-600',
+      color: 'bg-blue-50 text-blue-600',
       features: ['API Integration', 'Custom Frameworks', 'Enterprise Scale', 'African-focused']
     }
   ];
 
   return (
-    <section id="products" className="py-32 bg-white">
+    <section id="products" className="py-32 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-24">
-          <h2 className="text-5xl md:text-6xl font-light text-gray-900 mb-8">Products</h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto font-light">
+          <h2 className="text-5xl md:text-6xl font-thin text-black mb-8">Products</h2>
+          <p className="text-xl text-gray-700 max-w-3xl mx-auto font-light">
             Our innovative portfolio of software solutions addressing critical needs across different sectors
           </p>
         </div>
@@ -62,7 +62,7 @@ const ProductsSection: React.FC = () => {
           {products.map((product, index) => (
             <div 
               key={index}
-              className="bg-white border border-gray-200 rounded-3xl shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden"
+              className="bg-white border border-gray-100 rounded-3xl shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden"
             >
               <div className="p-10">
                 <div className="flex items-start justify-between mb-8">
@@ -71,7 +71,7 @@ const ProductsSection: React.FC = () => {
                       {product.icon}
                     </div>
                     <div>
-                      <h3 className="text-2xl font-medium text-gray-900">{product.name}</h3>
+                      <h3 className="text-2xl font-light text-black">{product.name}</h3>
                     </div>
                   </div>
                   <button
@@ -86,13 +86,13 @@ const ProductsSection: React.FC = () => {
                   </button>
                 </div>
                 
-                <p className="text-gray-600 mb-6 font-light leading-relaxed">{product.description}</p>
+                <p className="text-gray-700 mb-6 font-light leading-relaxed">{product.description}</p>
                 
                 <div className="flex flex-wrap gap-2 mb-6">
                   {product.features.map((feature, featureIndex) => (
                     <span 
                       key={featureIndex}
-                      className="px-4 py-2 bg-gray-100 text-gray-700 rounded-full text-sm font-medium"
+                      className="px-4 py-2 bg-gray-50 text-gray-700 rounded-full text-sm font-light border border-gray-100"
                     >
                       {feature}
                     </span>
@@ -105,7 +105,7 @@ const ProductsSection: React.FC = () => {
                   }`}
                 >
                   <div className="pt-6 border-t border-gray-100">
-                    <p className="text-gray-600 leading-relaxed font-light">{product.details}</p>
+                    <p className="text-gray-700 leading-relaxed font-light">{product.details}</p>
                   </div>
                 </div>
               </div>
